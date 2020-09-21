@@ -23,11 +23,11 @@ const db=knex({
     }
   });
 app.get('/',(req, res)=>{
-   // res.json(dataBase.users);
-   db.select('*').from('users')
-   .then(users=>{res.json(users)}
-   )
-   .catch(err=>{res.status(400).json('Error finding users!')});
+  //   db.select('*').from('users')
+  //  .then(users=>{res.json(users)}
+  //  )
+  //  .catch(err=>{res.status(400).json('Error finding users!')});
+  res.send("It is working!!");
 });
 app.post('/signIn', (req, res)=>{signIn.signInHandler(req, res, db, bcrypt)});
 app.post('/register',(req,res)=>{register.registerHandler(req, res, db, bcrypt)});
