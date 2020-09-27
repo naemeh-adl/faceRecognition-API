@@ -1,5 +1,6 @@
 
 const registerHandler=(req, res, db, bcrypt)=>{
+    console.log('ttttttttttttttttttttt',process.env.DATABASE_URL);
     const {name,password,email}=req.body;
     if(!name || !password || !email){
         return res.status(400).json('Invlid data');
