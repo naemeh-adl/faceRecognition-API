@@ -28,7 +28,7 @@ const registerHandler=(req, res, db, bcrypt)=>{
     }).then(trx.commit)
     .catch(trx.rollback);
 })
-.catch(err=>res.status(400).json("ajaaaaaaaaaaaab"));
+.catch(err=>res.status(400).json(err));
 }
 module.exports={
     registerHandler:registerHandler
