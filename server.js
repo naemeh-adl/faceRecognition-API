@@ -1,7 +1,6 @@
 const express=require('express');
 const bodyParser=require('body-parser');
 var cors = require('cors');
-//const { json } = require('body-parser');
 const app=express();
 const bcrypt = require('bcrypt-nodejs');
 
