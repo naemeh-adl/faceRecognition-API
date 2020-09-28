@@ -5,7 +5,9 @@ const app = new Clarifai.App({
     apiKey: '326b9f94bd604ef2ba9756c8dff7892f'
    });
    app.models.predict(Clarifai.FACE_DETECT_MODEL, req.body.url)
-   .then(data=>res.json(data))
+   .then(data=>{res.json(data)
+    console.log("rrrrrrrrrrrrrr",data);
+})
    .catch(res.status(400).json('Api is not working!'));
 }
 const imageHandler=(req, res, db)=>{
