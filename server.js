@@ -13,7 +13,6 @@ const saltRounds = 10;
 app.use(express.json());
 app.use(cors());
 const knex=require('knex');
-console.log('ttttttttttttttttttttt',process.env.DATABASE_URL);
 const db=knex({
     client: 'pg',
     connection: {
