@@ -8,7 +8,7 @@ const app = new Clarifai.App({
    .then(data=>{res.json(data)
     console.log("rrrrrrrrrrrrrr",data);
 })
-   .catch(res.status(400).json('Api is not working!'));
+   .catch(res.status(400).json(res));
 }
 const imageHandler=(req, res, db)=>{
     const{id}=req.body;
