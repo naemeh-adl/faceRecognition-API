@@ -6,9 +6,12 @@ const app = new Clarifai.App({
    });
    app.models.predict(Clarifai.FACE_DETECT_MODEL, req.body.url)
    .then(data=>{res.json(data)
-    console.log("rrrrrrrrrrrrrr",data);
+    
 })
-   .catch(res.status(400).json(res.body));
+   .catch(err=>{
+    console.log("bbbbbbbbbbbbbbb",err.body);   
+    console.log("rrrrrrrrrrrrr",err.body); 
+    res.status(400).json("EEEEEEERRRRRROOORRR"+err)});
 }
 const imageHandler=(req, res, db)=>{
     const{id}=req.body;
